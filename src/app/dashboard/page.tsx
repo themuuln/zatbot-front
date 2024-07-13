@@ -1,13 +1,14 @@
 'use client';
 
-import { BotCard, Filters } from '@/components/dashboard';
 import Container from '@/components/ui/container';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { supabase } from '@/lib/initSupabase';
 import { useEffect, useState } from 'react';
 import { tab } from './data';
 import { LinkStatusEnum } from './types';
-import type { FilterTypes } from '@/types';
+import type { BotCardType, FilterTypes } from '@/types';
+import Filters from '@/components/dashboard/filters';
+import BotCard from '@/components/dashboard/bot-card';
 
 const Dashboard = () => {
   const [bots, setBots] = useState<any>();
@@ -68,7 +69,7 @@ const Dashboard = () => {
             filter={filter}
           />
           <div className='grid grid-cols-4 gap-4'>
-            {bots?.map((item: BotCard) => (
+            {bots?.map((item: BotCardType) => (
               <BotCard key={item?.name} item={item} />
             ))}
           </div>

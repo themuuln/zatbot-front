@@ -1,6 +1,6 @@
 import { LinkStatusEnum } from '@/app/dashboard/types';
 
-export type BotCard = {
+export type BotCardType = {
   name: string;
   connected_page: {
     id: string;

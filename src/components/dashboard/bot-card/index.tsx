@@ -13,10 +13,10 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import Link from 'next/link';
-import type { BotCard } from '@/types';
+import type { BotCardType } from '@/types';
 import { options } from './data';
 
-const BotCard = ({ item }: { item: BotCard }) => {
+const BotCard = ({ item }: { item: BotCardType }) => {
   return (
     <Link href={`/bot/${item?.name}`}>
       <Card className='max-w-xs'>

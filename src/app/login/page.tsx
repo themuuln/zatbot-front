@@ -12,7 +12,7 @@ export default function Login() {
   const [error, setError] = useState(null);
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     try {
@@ -23,7 +23,7 @@ export default function Login() {
       if (error) throw error;
       // Redirect to dashboard or home page after successful login
       router.push('/dashboard');
-    } catch (error) {
+    } catch (error: any) {
       setError(error.message);
     }
   };

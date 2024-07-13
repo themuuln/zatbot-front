@@ -9,7 +9,7 @@ export default function Register() {
   const [error, setError] = useState(null);
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
       const { user, error } = await supabase.auth.signUp({
@@ -19,7 +19,7 @@ export default function Register() {
       if (error) throw error;
       alert('Check your email for the confirmation link!');
       router.push('/login');
-    } catch (error) {
+    } catch (error: any) {
       setError(error.message);
     }
   };
