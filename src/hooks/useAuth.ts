@@ -8,7 +8,7 @@ const useAuth = () => {
   const [loading, setLoading] = useState<any>(true);
 
   useEffect(() => {
-    const session = supabase.auth.getSession();
+    const session: any = supabase.auth.getSession();
     setUser(session?.user ?? null);
     setLoading(false);
 
