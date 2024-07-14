@@ -17,7 +17,6 @@ import { Button } from '../ui/button';
 import { ThemeToggler } from './ThemeToggler';
 
 const Header = () => {
-  const isAuth = true;
   const { user } = useAuth();
   const router = useRouter();
 
@@ -32,7 +31,7 @@ const Header = () => {
   return (
     <header className='h-20 border-b justify-center flex items-center'>
       <div className='container items-center justify-between flex'>
-        <Link href={isAuth ? '/dashboard' : '/'}>
+        <Link href={user?.role === 'authenticated' ? '/dashboard' : '/'}>
           <div className='uppercase font-bold text-lg'>Logo</div>
         </Link>
         <div className='flex flex-row space-x-4'>
@@ -59,9 +58,6 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            // <Link href={'/dashboard'}>
-            //   <Button>Dashboard</Button>
-            // </Link>
             <div className='flex space-x-4 items-center'>
               <Link href={'/login'}>
                 <Button variant={'secondary'}>Нэвтрэх</Button>

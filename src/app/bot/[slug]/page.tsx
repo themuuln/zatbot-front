@@ -24,31 +24,32 @@ const Page = () => {
   return (
     <>
       <Container>
-        <Input
-          onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setFilter(e.target.value)
-          }
-          placeholder='Хайх'
-        />
-        <div className='flex justify-between'>
-          <p>Үндсэн үйлдэл</p>
+        <div className='flex flex-col md:space-y-4'>
+          <Input
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setFilter(e.target.value)
+            }
+            placeholder='Хайх'
+          />
+          <div className='flex justify-between'>
+            <p>Үндсэн үйлдэл</p>
 
-          <div className='flex flex-row space-x-4'>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant={'outline'}>+</Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className='w-56'>
-                <DropdownMenuItem onClick={() => {}}>
-                  Бүлгийн нэр солих
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <div className='flex flex-row space-x-4'>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant={'outline'}>+</Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className='w-56'>
+                  <DropdownMenuItem onClick={() => {}}>
+                    Бүлгийн нэр солих
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
-            <Button>+ Автоматжуулалт нэмэх</Button>
+              <Button>+ Автоматжуулалт нэмэх</Button>
+            </div>
           </div>
-        </div>
-        {/* <Accordion type='single' defaultValue='item-1' collapsible>
+          {/* <Accordion type='single' defaultValue='item-1' collapsible>
           <AccordionItem value='item-1'>
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
             <AccordionContent>
@@ -56,6 +57,7 @@ const Page = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion> */}
+        </div>
       </Container>
     </>
   );
