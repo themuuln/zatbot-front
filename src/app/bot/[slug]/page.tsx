@@ -13,6 +13,7 @@ import {
   Node,
   useReactFlow,
   EdgeProps,
+  BackgroundVariant,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { useTheme } from 'next-themes';
@@ -167,7 +168,7 @@ export default function App() {
         preventScrolling
       >
         <Background
-          variant='dots'
+          variant={BackgroundVariant.Dots}
           color={theme === 'dark' ? '#333' : '#ddd'}
           gap={16}
           size={1}
