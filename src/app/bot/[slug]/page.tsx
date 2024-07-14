@@ -22,7 +22,7 @@ import { useCallback, useState } from 'react';
 // Custom node component
 const CustomNode = ({ data }: { data: { label: string } }) => {
   return (
-    <div className='custom-node p-4 rounded-lg shadow-md bg-white dark:bg-gray-800 border border-gray-200 hover:border-gray-500 dark:border-gray-700'>
+    <div className='custom-node p-4 rounded-lg shadow-md bg-white dark:bg-[#0a0a0a] border border-gray-200 hover:border-gray-500 dark:border-gray-700'>
       <Handle type='target' position={Position.Top} />
       <div className='text-sm font-medium text-gray-900 dark:text-white'>
         {data.label}

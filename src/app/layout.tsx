@@ -23,7 +23,7 @@ export default function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <Header />
           {children}
-          <Footer />
+          {/* <Footer /> */}
           <Toaster />
         </ThemeProvider>
       </body>
