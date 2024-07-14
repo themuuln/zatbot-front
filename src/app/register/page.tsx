@@ -15,7 +15,7 @@ export default function Register() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     try {
-      const { user, error } = await supabase.auth.signUp({
+      const { error } = await supabase.auth.signUp({
         email: email,
         password: password,
       });
